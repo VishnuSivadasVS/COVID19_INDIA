@@ -20,11 +20,21 @@ foreach ($Detail as $node) {
 
 for ($i = 0; $i < count($dataHTML); $i++) {
     for ($j = 0; $j < count($thHTML); $j++) {
+        if($thHTML[$j] == "S. No.")
+            $thHTML[$j] = "State Number";
+        elseif ($thHTML[$j] == "Name of State / UT")
+            $thHTML[$j] = "Name of State or UT";
+        elseif ($thHTML[$j] == "Total Confirmed cases*")
+            $thHTML[$j] = "Confirmed cases";
+        elseif ($thHTML[$j] == "Cured/Discharged/Migrated")
+            $thHTML[$j] = "Cured or Discharged or Migrated";
+        elseif ($thHTML[$j] == "Deaths**")
+            $thHTML[$j] = "Deaths";
         $tempData[$i][$thHTML[$j]] = $dataHTML[$i][$j];
     }
 }
 $dataHTML = $tempData;
 unset($tempData);
-echo json_encode(array("IndiaCovid19Details" => $dataHTML), JSON_PRETTY_PRINT);
+echo json_encode(array("COVID19IN" => $dataHTML), JSON_PRETTY_PRINT);
 
 ?>
