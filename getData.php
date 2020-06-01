@@ -26,13 +26,15 @@ foreach ($Detail as $node) {
 
 for ($i = 0; $i < count($dataHTML); $i++) {
     for ($j = 0; $j < count($thHTML); $j++) {
-        if($thHTML[$j] == "S. No.")
+        if ($thHTML[$j] == "S. No.")
             $thHTML[$j] = "State Number";
         elseif ($thHTML[$j] == "Name of State / UT")
             $thHTML[$j] = "Name of State or UT";
+        elseif ($thHTML[$j] == "Active Cases*")
+            $thHTML[$j] = "Active Cases";
         elseif ($thHTML[$j] == "Total Confirmed cases*")
             $thHTML[$j] = "Confirmed cases";
-        elseif ($thHTML[$j] == "Cured/Discharged/Migrated")
+        elseif ($thHTML[$j] == "Cured/Discharged/Migrated*")
             $thHTML[$j] = "Cured or Discharged or Migrated";
         elseif ($thHTML[$j] == "Deaths**")
             $thHTML[$j] = "Deaths";
