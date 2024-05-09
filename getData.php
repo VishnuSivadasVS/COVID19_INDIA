@@ -1,9 +1,6 @@
 <?php
 /*
  * Developer: VishnuSivadasVS
- * Website: https://www.vishnusivadas.com
- * Github: https://github.com/VishnuSivadasVS
- * API: https://staysafe.vishnusivadas.com/apis/covid19_india.php
  */
 require "simple_html_dom.php";
 header('Content-Type: application/json');
